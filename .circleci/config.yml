@@ -18,11 +18,6 @@ jobs:
           name: Run django tests
           command: |
             pipenv run python manage.py test
-      - run: 
-          name: Authenticate with GitHub
-          command: |
-            echo running authorization
-            gh auth login --with-token -h https://github.com/Vishwakanth7662/demo_circleci
       - store_test_results:
           path: test-results
       - store_artifacts:
